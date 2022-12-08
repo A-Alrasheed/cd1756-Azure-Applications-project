@@ -2,12 +2,12 @@ from datetime import datetime
 from FlaskWebProject import app, db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-#from azure.storage.blob import BlockBlobService
 from azure.storage.blob import BlobServiceClient 
 import string, random
-#from werkzeug import secure_filename
 from werkzeug.utils import secure_filename
 from flask import flash
+#from azure.storage.blob import BlockBlobService
+#from werkzeug import secure_filename
 
 blob_container = app.config['BLOB_CONTAINER']
 blob_service = BlobServiceClient(account_url=app.config['BLOB_ACCOUNT'], account_key=app.config['BLOB_STORAGE_KEY'])
